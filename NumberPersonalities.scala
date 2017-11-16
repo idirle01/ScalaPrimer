@@ -6,12 +6,6 @@ object NumberPersonalities {
 
   def isPrime(n: Int): Boolean = (2 until n) forall (x => n % x != 0)
 
-  isPrime(8)
-  isPrime(7)
-  isPrime(51)
-  isPrime(5)
-
-
   def squared(x: Int) = {
     x * x
   }
@@ -54,6 +48,11 @@ object NumberPersonalities {
   }
 
   println("****")
+  
+  isPrime(8)
+  isPrime(7)
+  isPrime(51)
+  isPrime(5)
   
   sumOfDigitsHelper(1024)
   sumOfDigitsHelper(1111)
