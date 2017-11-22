@@ -11,9 +11,15 @@ object ExerciseSheet07 extends App {
 			}
 	}
 
-	/*def matchColourRewritten(colour:String):String = {
-	  //TODO
-	}*/
+	def matchColourRewritten(colour:String):String = {
+			var result:String = null
+					if (colour == "red") result = "RED" else {
+						if (colour =="blue") result = "BLUE" else {
+							if (colour == "green") result = "GREEN" else result ="UNKNOWN COLOUR: " + colour
+						}
+					}
+	result
+	}
 
 	def oneOrTheOtherRewritten(exp:Boolean):String = {
 			exp match {
@@ -46,16 +52,15 @@ object ExerciseSheet07 extends App {
 			}
 	}
 
-	var weather_forecast:String = null
-			def forecast (percentageCloudiness: Int): String = {
-					percentageCloudiness match {
-					case 100 => "Sunny"
-					case 80  => "Mostly Sunny"
-					case 50  => "Partly Sunny"
-					case 20  => "Mostly cloudy"
-					case 0   => "Cloudy"
-					case _   => "Unknown"
-					}
+	def forecast (percentageCloudiness: Int): String = {
+			percentageCloudiness match {
+			case 100 => "Sunny"
+			case 80  => "Mostly Sunny"
+			case 50  => "Partly Sunny"
+			case 20  => "Mostly cloudy"
+			case 0   => "Cloudy"
+			case _   => "Unknown"
+			}
 	}
 
 }
