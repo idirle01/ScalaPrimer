@@ -16,8 +16,8 @@ object Ex01 extends App {
     class Battery extends EnergySource with BatteryPower
 
     val battery = new Battery
-    println(battery.monitor(80))
-    println(battery.monitor(30))
-    println(battery.monitor(10))
+    assert(battery.monitor(80) == 80)
+    assert(battery.monitor(30) == 30)
+    assert(battery.monitor(10) == 10)
   }
 }
